@@ -1,0 +1,13 @@
+<div>
+  <material-input label="What message do you want to see ?"
+                  autoFocus floatingLabel style="width:80%"
+                  [(ngModel)]="newTodo"
+                  (keyup.enter)="handleShowToast()">
+  </material-input>
+
+  <material-fab mini raised
+                (trigger)="handleShowToast()"
+                [disabled]="newTodo.isEmpty">
+    <material-icon icon="add"></material-icon>
+  </material-fab>
+</div>
